@@ -12,6 +12,22 @@ Environment Setup
 Project Setup
 -------------
 
-1. Create a virtualenv for the project
-2. Git clone the project
-3. Work!
+1. Create a virtualenv for the project 
+```bash
+cd myenvironments
+virtualenv myvirtualenv
+```
+
+2. Git clone the project in a folder you would like 
+```bash
+cd myproject
+git clone myproject
+```
+
+3. Work in your virtual environment 
+```bash
+source /path/to/myvirtualenv/bin/activate
+# now you are in your virtualenv
+# and can install dependencies
+pip install scrapy
+```
