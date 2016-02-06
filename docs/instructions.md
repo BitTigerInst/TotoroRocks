@@ -20,14 +20,15 @@ virtualenv myvirtualenv
 
 2. Git clone the project in a folder you would like 
 ```bash
-cd myproject
+cd myprojects
 git clone myproject
 ```
 
 3. Work in your virtual environment 
 ```bash
+cd myproject
 source /path/to/myvirtualenv/bin/activate
 # now you are in your virtualenv
 # and can install dependencies
-pip install scrapy
+pip install -r requirements.txt
 ```
