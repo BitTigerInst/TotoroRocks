@@ -39,8 +39,8 @@ class HuaweiSpider(scrapy.Spider):
     ]
 
     def parse(self, response):
+        log.debug("Parsing page: {}".format(response.url))
         page = Selector(response)
-
         hrefs = page.xpath(RANK_PAGE_XPATHS['hrefs'])
 
         for href in hrefs:

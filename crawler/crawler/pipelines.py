@@ -14,7 +14,7 @@ log = getLogger(__name__)
 
 class CrawlerPipeline(object):
     def process_item(self, item, spider):
-        log.info("recording item: {}".format(item['appid']))
+        log.debug("recording item: {}".format(item['appid']))
 
         with open(OUTPUT_FILE, 'awb') as dat_file:
             dat_file.write("{}\t{}\t{}\t{}\n".format(item['appid'], item['title'], item['intro'], item['recommended']))
