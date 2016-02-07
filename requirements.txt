@@ -1,1 +1,1 @@
--r crawler/totoro/requirements.txt
+-r crawler/crawler/requirements.txt

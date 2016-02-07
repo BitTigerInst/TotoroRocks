@@ -51,10 +51,6 @@ DOWNLOAD_DELAY=0
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 
-# DOWNLOADER_MIDDLEWARES = {
-#         'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware' : None,
-#         'crawler.networks.rotate_useragent.RotateUserAgentMiddleware' :400
-# }
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None,
     'scrapy_fake_useragent.middleware.RandomUserAgentMiddleware': 400,
