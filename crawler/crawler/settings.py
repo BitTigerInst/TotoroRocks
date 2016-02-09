@@ -15,6 +15,8 @@ OUTPUT_FILE = 'huawei.dat'
 SPIDER_MODULES = ['crawler.spiders']
 NEWSPIDER_MODULE = 'crawler.spiders'
 
+# Whether or not to enable random proxy
+ENABLE_RANDOM_PROXY = False
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'crawler (+http://www.yourdomain.com)'
@@ -55,6 +57,21 @@ DOWNLOADER_MIDDLEWARES = {
     'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None,
     'scrapy_fake_useragent.middleware.RandomUserAgentMiddleware': 400,
 }
+
+if ENABLE_RANDOM_PROXY:
+    # Retry many times since proxies often fail
+    RETRY_TIMES = 10
+    # Retry on most error codes since proxies fail for different reasons
+    RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
+
+    # random proxy settings
+    DOWNLOADER_MIDDLEWARES.update({
+        'scrapy.contrib.downloadermiddleware.retry.RetryMiddleware': 90,
+        # Fix path to this module
+        'huawei.randomproxy.RandomProxy': 100,
+        'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 110
+    })
+    PROXY_LIST = 'proxy_list.txt'
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
