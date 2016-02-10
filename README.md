@@ -23,7 +23,7 @@ _Details of each schedule and task will be added later._
 Resource
 --------
 
-1. __[BitTiger Project: AppStore - Crawler]__ https://slack-files.com/T0GUEMKEZ-F0J4G9QTT-274d3bc97e
+1. __[BitTiger Project: AppStore - Crawler](https://slack-files.com/T0GUEMKEZ-F0J4G9QTT-274d3bc97e)__
 
 Language & Framework
 --------------------
