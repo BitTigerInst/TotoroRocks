@@ -3,7 +3,7 @@
 Description
 -----------
 
-Inspired by ...., ... aims to develop a ....
+Inspired by , ... aims to develop a ....
 
 <insert more details>
 
@@ -41,4 +41,4 @@ Development Guildlines
 Owner
 -----
 
-@team: 真·龙猫
+@team: 
